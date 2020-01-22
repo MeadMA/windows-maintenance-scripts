@@ -14,16 +14,18 @@ Executes all actions/switches for this script.  Carefully read the other
 parameters before using this.
 
 .PARAMETER DisableCortana
-Disables Cortana
+Disables Cortana.  Effective machine-wide.
 
 .PARAMETER DisableCortanaWebSearch
-Prevents Cortana from searching the web when searching on the Start Menu
+Prevents Cortana from searching the web when searching on the Start Menu.
+Effective machine-wide.
 
 .PARAMETER DisableBackgroundApps
-Prevents Windows Store apps from running in the background
+Prevents Windows Store apps from running in the background.  Effective
+machine-wide.
 
 .PARAMETER DisableVisualEffects
-Disables all Visual Effects.  This is only effective for the current user.  Run
+Disables all Visual Effects.  Effective only for the current user.  Run
 SystemPropertiesPerformance.exe to enable specific, individual effects.
 
 .LINK
