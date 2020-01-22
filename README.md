@@ -6,8 +6,9 @@ This PowerShell script performs various actions to improve the speed of Windows.
 
 `Get-Help .\win10-speed.ps1 -Full`
 
-The full list of options is:
+The available switches are:
 
-* `DisableCortana`
-* `DisableCortanaWebSearch`
-* `DisableBackgroundApps`
+* `-DisableCortana`
+* `-DisableCortanaWebSearch`
+* `-DisableBackgroundApps`
+* `-All` (WARNING: Use this carefully!)
