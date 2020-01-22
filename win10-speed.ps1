@@ -22,6 +22,10 @@ Prevents Cortana from searching the web when searching on the Start Menu
 .PARAMETER DisableBackgroundApps
 Prevents Windows Store apps from running in the background
 
+.PARAMETER DisableVisualEffects
+Disables all Visual Effects.  This is only effective for the current user.  Run
+SystemPropertiesPerformance.exe to enable specific, individual effects.
+
 .LINK
 https://www.gnu.org/licenses/
 #>
@@ -49,7 +53,8 @@ https://www.gnu.org/licenses/
 param(
 	[Switch]$All,
 	[Switch]$DisableCortana,
-	[Switch]$DisableCortanaWebSearch
+	[Switch]$DisableCortanaWebSearch,
+	[Switch]$DisableVisualEffects
 )
 
 # Checks if Registry key exists, and creates it if not
@@ -92,6 +97,11 @@ Function DisableCortanaWebSearch {
 Function DisableBackgroundApps {
 	$AppKey = "HKLM:SOFTWARE\Policies\Microsoft\Windows\AppPrivacy"
 	SetRegValue -KeyPath $AppKey -ValueName "LetAppsRunInBackground" -ValueData "2" -ValueType "DWORD"
+}
+
+Function DisableVisualEffects {
+	$AppKey = "HKCU:Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects"
+	SetRegValue -KeyPath $AppKey -ValueName "VisualFXSetting" -ValueData "2" -ValueType "DWORD"
 }
 
 # Main program

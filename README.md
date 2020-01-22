@@ -11,4 +11,5 @@ The available switches are:
 * `-DisableCortana`
 * `-DisableCortanaWebSearch`
 * `-DisableBackgroundApps`
+* `-DisableVisualEffects`
 * `-All` (WARNING: Use this carefully!)
