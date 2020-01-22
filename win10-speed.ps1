@@ -30,6 +30,9 @@ SystemPropertiesPerformance.exe to enable specific, individual effects.
 
 .LINK
 https://www.gnu.org/licenses/
+
+.LINK
+https://github.com/MeadMA/windows-maintenance-scripts/
 #>
 
 # win10-speed: Improves the speed of Windows 10
