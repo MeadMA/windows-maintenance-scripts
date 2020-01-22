@@ -59,6 +59,7 @@ param(
 	[Switch]$All,
 	[Switch]$DisableCortana,
 	[Switch]$DisableCortanaWebSearch,
+	[Switch]$DisableBackgroundApps,
 	[Switch]$DisableVisualEffects
 )
 
@@ -124,4 +125,9 @@ If ($DisableCortanaWebSearch -Or $All) {
 If ($DisableBackgroundApps -Or $All) {
 	Write-Output "Executing DisableBackgroundApps action"
 	DisableBackgroundApps
+}
+
+If ($DisableVisualEffects -Or $All) {
+	Write-Output "Executing DisableVisualEffects action"
+	DisableVisualEffects
 }
